@@ -5,9 +5,10 @@
     <title>San Francisco Film Locations</title>
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- load angular via cdn. todo: load via npm -->
+    <!-- load angular, jquery, google maps via cdn. todo: load via npm -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
-
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAvZY1V5Fxp3Z7Mifb_0v3yEgpmHaizJWk"></script>
   </head>
   <body class="container" ng-app="FilmApp" ng-controller="FilmCtrl">
 
@@ -15,21 +16,11 @@
 
     <p>Search: <input type="text" ng-model="filmSearch" class="form-control"></p>
 
-    <table class="table">
-      <tr>
-        <th><a href="" ng-click="sortBy = 'title'">Name</a></th>
-        <th><a href="" ng-click="sortBy = 'release_year'">Year</a></th>
-        <th><a href="" ng-click="sortBy = 'locations'">Locations</a></th>
-      </tr>
-      <tr ng-repeat="film in films | orderBy:sortBy | filter:filmSearch">
-        <td>{{film.title}}</td>
-        <td>{{film.release_year}}</td>
-        <td>{{film.locations}}</td>
-      </tr>
-    </table>
+    <div id="map_canvas"></div>
 
     <!-- load scripts -->
     <script src="js/main.js"></script>
+    <script src="js/geocode.js"></script>
 
   </body>
   </html>
