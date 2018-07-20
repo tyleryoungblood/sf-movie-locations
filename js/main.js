@@ -5,7 +5,7 @@ angular.module("FilmApp", []).controller("FilmCtrl", [
     $http
       .get("https://data.sfgov.org/resource/wwmu-gmzc.json")
       .then(function(response) {
-        console.log(response.data);
+        //console.log(response.data);
         $scope.films = response.data;
       });
   }
