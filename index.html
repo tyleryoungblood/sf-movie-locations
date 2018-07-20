@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>San Francisco Film Locations</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- load angular via cdn. todo: load via npm -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+
+  </head>
+  <body class="container" ng-app="FilmApp" ng-controller="FilmCtrl">
+
+    <h1>San Francisco Film Locations</h1>
+
+    <p>Search: <input type="text" ng-model="filmSearch" class="form-control"></p>
+
+    <table class="table">
+      <tr>
+        <th><a href="" ng-click="sortBy = 'title'">Name</a></th>
+        <th><a href="" ng-click="sortBy = 'release_year'">Year</a></th>
+        <th><a href="" ng-click="sortBy = 'locations'">Locations</a></th>
+      </tr>
+      <tr ng-repeat="film in films | orderBy:sortBy | filter:filmSearch">
+        <td>{{film.title}}</td>
+        <td>{{film.release_year}}</td>
+        <td>{{film.locations}}</td>
+      </tr>
+    </table>
+
+    <!-- load scripts -->
+    <script src="js/main.js"></script>
+
+  </body>
+  </html>
