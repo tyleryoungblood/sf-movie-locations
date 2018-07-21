@@ -16,8 +16,12 @@
 
     <h1>San Francisco Film Locations</h1>
 
-    <select name="Films" id="">
-      <option ng-if="film.locations" ng-repeat="film in films | unique: 'title' | orderBy: 'title'" value="{{film.title}}">{{film.title}}</option>
+    <select id="" ng-model="selectedFilm" ng-change="updateMap(selectedFilm)">
+      <option ng-if="film.locations"
+              ng-repeat="film in films | unique: 'title' | orderBy: 'title'"
+              value="{{film.title}}">{{film.title}}
+
+      </option>
     </select>
 
     <p>Search: <input type="text" ng-model="filmSearch" class="form-control"></p>
@@ -26,7 +30,7 @@
 
     <!-- load scripts -->
     <script src="js/main.js"></script>
-    <script src="js/geocode.js"></script>
+    <!-- <script src="js/geocode.js"></script> -->
 
   </body>
   </html>
