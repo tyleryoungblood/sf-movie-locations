@@ -1,0 +1,23 @@
+{
+  "name": "sf-movie-locations",
+  "version": "1.0.0",
+  "description": "### Post Interview Challenge - Unitrends",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyleryoungblood/sf-movie-locations.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyleryoungblood/sf-movie-locations/issues"
+  },
+  "homepage": "https://github.com/tyleryoungblood/sf-movie-locations#readme",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-filter": "^0.5.17"
+  }
+}
