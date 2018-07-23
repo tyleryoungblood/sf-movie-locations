@@ -1,1 +1,1 @@
-app.service("dataService",function(n){return{async:function(){return n.get("https://data.sfgov.org/resource/wwmu-gmzc.json").then(function(n){return console.log(n),n.data})}}});
+app.service("DataService",["$http","$q",function(e,t){this.getData=function(){var r=t.defer();return e.get("https://data.sfgov.org/resource/wwmu-gmzc.json").then(function(e){return r.resolve(e.data)},function(e){return console.error("Error while fetching users"),t.reject(e)}),r.promise}}]);
