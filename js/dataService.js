@@ -1,0 +1,1 @@
+app.service("dataService",function(n){return{async:function(){return n.get("https://data.sfgov.org/resource/wwmu-gmzc.json").then(function(n){return console.log(n),n.data})}}});
