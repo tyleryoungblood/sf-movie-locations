@@ -39,11 +39,16 @@ gulp.task("uglifyjs", function() {
     .pipe(gulp.dest("./dist/js"));
 });
 
+gulp.task("img", function() {
+  return gulp.src("img/**/*.{gif,jpg,png,svg}").pipe(gulp.dest("./dist/img"));
+});
+
 gulp.task("watch", function() {
   console.log("watching for changes");
   gulp.watch("js/**/*.js", ["uglifyjs"]);
   gulp.watch("css/**/*.styl", ["styles"]);
   gulp.watch("index.html", ["minifyHTML"]);
+  gulp.watch("img/**/*.{gif,jpg,png,svg}", ["img"]);
 });
 
 /**

@@ -16,7 +16,7 @@
   <body ng-app="FilmApp" ng-controller="FilmCtrl">
     <header>
       <h1 class="map-header">San Francisco Film Locations</h1>
-      <input class="film-search" type="text" ng-model="filmSearch" list="filmSearchData"> <a href="" class="search-icon" ng-click="updateMap(filmSearch)"></a>
+      <input class="film-search" type="text" ng-model="filmSearch" list="filmSearchData"><a href="" class="search-icon" ng-click="updateMap(filmSearch)"></a>
       <datalist id="filmSearchData">
         <option  ng-repeat="film in films | unique: 'title' | orderBy: 'title'" value="{{film.title}}">
       </datalist>
