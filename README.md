@@ -5,7 +5,7 @@
 San Fransisco Film Locations is a simple app that pulls JSON data from [DataSF](http://www.datasf.org/): [Film
 Locations](https://data.sfgov.org/Arts-Culture-and-Recreation-/Film-Locations-in-San-Francisco/yitu-d5am). When a user selects a film (by clicking on the dropdown or typing in the search box) the filming locations(s) are plotted on a map. Clicking on a map marker displays more information about the location.
 
-Hosted: [Github Pages](https://tyleryoungblood.github.io/sf-movie-locations/)
+View [DEMO](https://tyleryoungblood.github.io/sf-movie-locations/)
 
 ![alt text](https://github.com/tyleryoungblood/sf-movie-locations/blob/master/img/sf-film-locations.png "SF Film Locations")
 
