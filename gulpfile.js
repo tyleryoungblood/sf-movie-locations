@@ -26,7 +26,7 @@ gulp.task("styles", function() {
       })
     )
     .pipe(prefix("last 2 versions"))
-    .pipe(concat("main.css"))
+    .pipe(concat("app.css"))
     .pipe(gulp.dest("./dist/css"));
 });
 
@@ -35,7 +35,7 @@ gulp.task("uglifyjs", function() {
   gulp
     .src("js/**/*.js")
     .pipe(uglify())
-    .pipe(concat("main.js"))
+    .pipe(concat("app.js"))
     .pipe(gulp.dest("./dist/js"));
 });
 
