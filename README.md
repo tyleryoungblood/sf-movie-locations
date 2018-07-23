@@ -43,11 +43,11 @@ I chose AngularJS instead of Angular because of familiarity with Angular 1x.
 
   Currently Safari and IOS Safari don't support the `<datalist>` element. I chose to use a datalist because it seems to be the simplest way to get autocomplete searching working in supported browsers.
 
-- ~~Remove references to titles which return no map markers.~~ Fixed by adding ng-if="film.locations".
+- ~~Remove references to titles which return no map markers.~~ Fixed by adding `ng-if="film.locations"`.
 
 - Refactor search so that a user doesn't have to click on the search icon to get results back.
 
-- Store geocoded data in a separate database and then check to see if an address has already been geocoded. If it has, return the lat/long from db. If it hasn't route address through google map goecoding api. Currently there's a limit of 2,500 hits per day for the free tier of google maps so I haven't run into any over-limit issues, but it's inefficient to make repeated calls to geocode an address that's already been processed.
+- Store geocoded data in a separate database and then check to see if an address has already been geocoded. If it has, return the lat/long from db. If it hasn't, route address through google map goecoding api. Currently there's a limit of 2,500 hits per day for the free tier of google maps so I haven't run into any over-limit issues, but it's inefficient to make repeated calls to geocode an address that's already been processed.
 
 - Rework application so that a user can see all locations at once (if they choose to). This would overwhelm the geocoding api and be rather slow, so getting a separate db to store lat/long would be required first. Then as a user types in the search box the map pins could disappear as the possible film results get winnowed down.
 

@@ -106,8 +106,6 @@ app.controller("FilmCtrl", [
       $scope.updateMap = function(selectedFilm) {
         //remove any previous markers from map
         deleteMarkers();
-        console.log("inside updateMap()");
-        console.log(selectedFilm);
         for (i = 0; i < $scope.films.length; i++) {
           if ($scope.films[i].title === selectedFilm) {
             geocodeAddress($scope.films[i]);
