@@ -13,13 +13,13 @@ View [DEMO](https://tyleryoungblood.github.io/sf-movie-locations/)
 
 My [app](https://tyleryoungblood.github.io/sf-movie-locations/) was built using AngularJS and the following packages (managed through NPM):
 
-- angular-filter (gives access to unique filter to easily dedupe film titles).
-- gulp-autoprefixer (support older browsers)
-- gulp-html-minifier (to minify html)
-- gulp-stylus (to preprocess .styl to .css and minify)
-- gulp-uglify (to uglify js files)
-- gulp-concat (to concatenate css and js files into a single app.css and app.css file)
-- gulp-gh-pages (makes deploying to Github Pages quick and easy)
+- **angular-filter** gives access to unique filter to easily dedupe film titles.
+- **gulp-autoprefixer** provides support for older browsers.
+- **gulp-html-minifier** is used to minify html.
+- **gulp-stylus** is used to preprocess .styl to .css and minify.
+- **gulp-uglify** uglifies js files.
+- **gulp-concat** concatenates css and js files into a single app.css and app.css file.
+- **gulp-gh-pages** makes deploying to Github Pages quick and easy.
 
 I realize webpack is all the rage these days, but I still like Gulp for it's ease of use and simplicity, especially with a small app like this.
 
