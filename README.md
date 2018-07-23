@@ -54,3 +54,11 @@ I chose AngularJS instead of Angular because of familiarity with Angular 1x.
 - Pull movie poster data from a separate API (perhaps [themoviedb.org](https://www.themoviedb.org/) and display the poster for a selected film in the upper corner of the screen.
 
 - Fix z-index issue on map popup
+
+### Installation
+
+- Clone the repo and run `npm install`.
+- Load the `dist/index.html` file in any browser (the index references the concatenated css and js files in that exist dist, not root)
+- Gulp Commands:
+  - `gulp` (default) minifies and pushes changes to /dist
+  - `gulp deploy` deploys to Github Pages - you'd have to set up your own gh-pages branch to get this to work.
