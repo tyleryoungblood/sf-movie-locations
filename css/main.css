@@ -1,1 +1,1 @@
-#map_canvas{height:100%}html,body{height:100%;margin:0;padding:0}
+#map-canvas{height:100%}html,body{height:100%;margin:0;padding:0}body{font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu}header{position:absolute;top:2em;text-align:center;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);z-index:1;background-color:rgba(0,0,0,0.6);border-radius:.6em;padding:0 2em 2em 2em;color:#fff;}header .search-icon:before{content:"\1F50D"}
