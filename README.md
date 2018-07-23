@@ -43,7 +43,7 @@ I chose AngularJS instead of Angular because of familiarity with Angular 1x.
 
   Currently Safari and IOS Safari don't support the `<datalist>` element. I chose to use a datalist because it seems to be the simplest way to get autocomplete searching working in supported browsers.
 
-- ~~Remove references to titles which return no map markers.~~ Fixed by adding ng-if="film.locations"
+- ~~Remove references to titles which return no map markers.~~ Fixed by adding ng-if="film.locations".
 
 - Refactor search so that a user doesn't have to click on the search icon to get results back.
 
@@ -53,12 +53,12 @@ I chose AngularJS instead of Angular because of familiarity with Angular 1x.
 
 - Pull movie poster data from a separate API (perhaps [themoviedb.org](https://www.themoviedb.org/) and display the poster for a selected film in the upper corner of the screen.
 
-- Fix z-index issue on map popup
+- Fix z-index issue on map popup.
 
 ### Installation
 
 - Clone the repo and run `npm install`.
-- Load the `dist/index.html` file in any browser (the index references the concatenated css and js files in that exist dist, not root)
+- Load the `dist/index.html` file in any browser (the index references the concatenated css and js files in that exist dist, not root).
 - Gulp Commands:
-  - `gulp` (default) minifies and pushes changes to /dist
+  - `gulp` (default) minifies and pushes changes to /dist.
   - `gulp deploy` deploys to Github Pages - you'd have to set up your own gh-pages branch to get this to work.
