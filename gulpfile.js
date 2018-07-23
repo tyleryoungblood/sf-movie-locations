@@ -26,6 +26,7 @@ gulp.task("styles", function() {
       })
     )
     .pipe(prefix("last 2 versions"))
+    .pipe(concat("main.css"))
     .pipe(gulp.dest("./dist/css"));
 });
 

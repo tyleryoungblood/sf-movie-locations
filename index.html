@@ -11,17 +11,18 @@
     <!-- <script src="./node_modules/angular-filter/dist/angular-filter.js"></script> -->
     <!-- load google maps api -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvZY1V5Fxp3Z7Mifb_0v3yEgpmHaizJWk"></script>
+
   </head>
-  <body class="container" ng-app="FilmApp" ng-controller="FilmCtrl">
+  <body ng-app="FilmApp" ng-controller="FilmCtrl">
+    <header>
+      <h1 class="map-header">San Francisco Film Locations</h1>
+      <input class="film-search" type="text" ng-model="filmSearch" list="filmSearchData"> <a href="" class="search-icon" ng-click="updateMap(filmSearch)"></a>
+      <datalist id="filmSearchData">
+        <option  ng-repeat="film in films | unique: 'title' | orderBy: 'title'" value="{{film.title}}">
+      </datalist>
+    </header>
 
-    <h1>San Francisco Film Locations</h1>
-
-    <input type="text" ng-model="filmSearch" list="filmSearchData"> <a href="" ng-click="updateMap(filmSearch)">Show Results</a>
-    <datalist id="filmSearchData">
-      <option  ng-repeat="film in films | unique: 'title' | orderBy: 'title'" value="{{film.title}}">
-    </datalist>
-
-    <div id="map_canvas"></div>
+    <section id="map-canvas"></section>
 
     <!-- load scripts -->
     <script src="js/main.js"></script>
