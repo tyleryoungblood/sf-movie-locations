@@ -4,7 +4,9 @@ var gulp = require("gulp"),
   uglify = require("gulp-uglify"),
   plumber = require("gulp-plumber"),
   prefix = require("gulp-autoprefixer"),
-  htmlmin = require("gulp-html-minifier");
+  htmlmin = require("gulp-html-minifier"),
+  deploy = require("gulp-gh-pages"),
+  concat = require("gulp-concat");
 
 gulp.task("minifyHTML", function() {
   gulp
@@ -32,6 +34,7 @@ gulp.task("uglifyjs", function() {
   gulp
     .src("js/**/*.js")
     .pipe(uglify())
+    .pipe(concat("main.js"))
     .pipe(gulp.dest("./dist/js"));
 });
 
@@ -40,6 +43,13 @@ gulp.task("watch", function() {
   gulp.watch("js/**/*.js", ["uglifyjs"]);
   gulp.watch("css/**/*.styl", ["styles"]);
   gulp.watch("index.html", ["minifyHTML"]);
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task("deploy", function() {
+  return gulp.src("./dist/**/*").pipe(deploy());
 });
 
 //run by typing "gulp" from command line
